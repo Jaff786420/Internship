@@ -1,0 +1,4 @@
+bottle
+pymongo
+boto3
+gunicorn

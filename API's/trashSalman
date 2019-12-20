@@ -1,0 +1,1 @@
+db.dustbin1.find({     geometry : {         $nearSphere : {             $geometry : {                     type : "Point",                     coordinates : [ 77.602089, 13.055188 ]              },              $maxDistance : 350         }     }    }).count();

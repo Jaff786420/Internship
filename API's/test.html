@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <script src="lib/jquery/jquery.min.js"></script>
+
+	<title>TrashMap | MapBox</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//$('#btn').click(function(){
+				if ("geolocation" in navigator) { 
+		 			navigator.geolocation.getCurrentPosition(position => { 
+	   
+						currLat=position.coords.latitude;
+						currLon=position.coords.longitude;
+						
+						$.get('/test?lati='+currLat+'&longi='+currLon, function(data){
+							console.log(data)
+						})
+					})
+		 		}
+			})
+		//})
+	</script>
+</head>
+<body>
+	<!--<form action="/test" method="post" id="loc">
+		
+		<input type="hidden" name="lati" id="lt"/>
+		<input type="hidden" name="long" id="ln"/>
+		<script type="text/javascript">
+		if ("geolocation" in navigator) { 
+		 navigator.geolocation.getCurrentPosition(position => { 
+	   
+	currLat=position.coords.latitude;
+	currLon=position.coords.longitude;
+
+	document.getElementById("lt").value=currLat;
+	document.getElementById("ln").value=currLon;
+	console.log(lt);
+	document.getElementById("loc").submit();
+	});
+
+	//fetch('/test')
+    /*.then(function (response) {
+        return response.text();
+    }).then(function (text) {
+        console.log('GET response text:');
+        console.log(text); // Print the greeting as text  
+    });*/
+}-->
+
+	<!--<button id="btn">Get val</button>-->
+</body>
+</html>
